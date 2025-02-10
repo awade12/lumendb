@@ -11,10 +11,11 @@ pip install lumendb
 ## Usage
 
 ```python
-from lumendb import Database  kkk
+from lumendb import Database
+
 # Initialize database
 db = Database()
-d
+
 # More usage examples coming soon...
 ```
 
