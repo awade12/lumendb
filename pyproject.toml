@@ -4,26 +4,54 @@ build-backend = "hatchling.build"
 
 [project]
 name = "lumendb"
-version = "0.1.0"
+version = "0.6.0"
 authors = [
   { name="Andrew Wade" },
 ]
 description = "LumenDB - A modern database solution"
 readme = "README.md"
 requires-python = ">=3.8"
+keywords = ["database", "sql", "db"]
+license = { text = "MIT" }
 dependencies = [
     "click>=8.0.0",
     "rich>=10.0.0",
 ]
 classifiers = [
-    "Programming Language :: Python :: 3",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
     "Operating System :: OS Independent",
+    "Topic :: Database",
 ]
 
 [project.urls]
 Homepage = "https://github.com/andrewwade/lumendb"
 Issues = "https://github.com/andrewwade/lumendb/issues"
+Documentation = "https://github.com/andrewwade/lumendb#readme"
 
 [project.scripts]
-lumendb = "lumendb.main:main" 
+lumendb = "lumendb.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["lumendb"]
+
+[tool.hatch.build]
+exclude = [
+    "tests/*",
+    "docs/*",
+    "*.pyc",
+    "*.pyo",
+    "*.pyd",
+    "__pycache__",
+    "*.so",
+    "*.dylib",
+    "*.dll",
+    ".pytest_cache",
+    ".coverage",
+] 
