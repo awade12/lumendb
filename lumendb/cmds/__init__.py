@@ -1,8 +1,3 @@
-"""
-LumenDB CLI Commands
-"""
+from .help import help
 
-from .init import init
-from .query import query
-
-__all__ = ['init', 'query'] 
+__all__ = ['help'] 

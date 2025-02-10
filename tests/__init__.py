@@ -1,3 +1,0 @@
-"""
-LumenDB Tests
-""" 

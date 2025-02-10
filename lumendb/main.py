@@ -5,8 +5,12 @@ LumenDB - A modern database solution
 import click
 from rich.console import Console
 from . import cmds
+import os
 
-__version__ = "0.1.0"
+# Read version from version.txt
+with open(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'version.txt')) as f:
+    __version__ = f.read().strip()
+
 console = Console()
 
 class Database:
@@ -37,12 +41,12 @@ class Database:
 @click.group()
 @click.version_option(version=__version__)
 def main():
-    """LumenDB - A modern database solution"""
+    """lumendb -- a ez/setup db"""
     pass
 
 
-main.add_command(cmds.init)
-main.add_command(cmds.query)
+
+main.add_command(cmds.help)
 
 if __name__ == '__main__':
     main()
