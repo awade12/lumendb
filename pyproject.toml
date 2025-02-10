@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lumendb"
+version = "0.1.0"
+authors = [
+  { name="Andrew Wade" },
+]
+description = "LumenDB - A modern database solution"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "click>=8.0.0",
+    "rich>=10.0.0",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/andrewwade/lumendb"
+Issues = "https://github.com/andrewwade/lumendb/issues"
+
+[project.scripts]
+lumendb = "lumendb.main:main" 
