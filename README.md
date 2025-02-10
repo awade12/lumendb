@@ -11,8 +11,7 @@ pip install lumendb
 ## Usage
 
 ```python
-from lumendb import Database
-
+from lumendb import Database  kkk
 # Initialize database
 db = Database()
 d
